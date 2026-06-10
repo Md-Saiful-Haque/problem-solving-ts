@@ -33,3 +33,12 @@ function removeDuplicates(arr: number[]): number[] {
 
 console.log(removeDuplicates([1, 2, 2, 3, 3, 4]))
 
+
+// Problem 4: Flatten a Nested Array
+
+function flattenArray(arr: (number | number[])[]): number[] {
+    return arr.flat();
+}
+
+console.log(flattenArray([1, [2, 3], [4, 5]]));
+
