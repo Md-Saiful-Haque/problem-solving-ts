@@ -23,3 +23,13 @@ function findMax(arr: number[]): number {
 }
 
 console.log(findMax([3, 1, 7, 2, 9]))
+
+
+// Problem 3: Remove Duplicates from Array
+
+function removeDuplicates(arr: number[]): number[] {
+    return arr.filter((item, index) => arr.indexOf(item) === index);
+}
+
+console.log(removeDuplicates([1, 2, 2, 3, 3, 4]))
+
