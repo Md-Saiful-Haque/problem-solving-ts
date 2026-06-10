@@ -42,3 +42,17 @@ function flattenArray(arr: (number | number[])[]): number[] {
 
 console.log(flattenArray([1, [2, 3], [4, 5]]));
 
+
+// Problem 5: Chunk an Array
+
+function chunkArray(arr: number[], size: number): number[][] {
+    const result: number[][] = [];
+
+    for (let i = 0; i < arr.length; i += size) {
+        result.push(arr.slice(i, i + size));
+    }
+
+    return result;
+}
+
+console.log(chunkArray([1,2,3,4,5], 2));
