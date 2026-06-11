@@ -49,3 +49,26 @@ function invertObject(obj: Record<string, any>): Record<string, any> {
 }
 
 console.log(invertObject({a: 1, b: 2}));
+
+
+// Problem 5: Find Duplicate Values in Array of Objects
+
+type Person = {
+    name: string;
+};
+
+function findDuplicateNames(arr: Person[]): string[] {
+
+    const count: Record<string, number> = {};
+
+    for (const person of arr) {
+        count[person.name] =
+            (count[person.name] || 0) + 1;
+    }
+
+    return Object.keys(count).filter(
+        name => count[name] > 1
+    );
+}
+
+console.log(findDuplicateNames([{name:'Ali'},{name:'Sara'},{name:'Ali'}]));
