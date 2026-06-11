@@ -33,3 +33,19 @@ function fizzBuzz(n: number): void {
 }
 
 fizzBuzz(15);
+
+
+// Problem 4: Invert an Object
+
+function invertObject(obj: Record<string, any>): Record<string, any> {
+  const newObj: Record<string, any> = {};
+  
+  for (const key in obj) {
+    const value = obj[key];
+    newObj[value] = key;
+  }
+  
+  return newObj;
+}
+
+console.log(invertObject({a: 1, b: 2}));
